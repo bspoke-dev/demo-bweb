@@ -1,0 +1,61 @@
+# Lines starting with `#` are comments.
+
+# ignore l'interieur du dossier sans ignoré le dossier lui meme
+
+Project/Trash/*
+!Project/Trash/.gitignore
+
+Project/DerivedData/*
+!Project/DerivedData/.gitignore
+
+Data/*
+!Data/.gitignore
+*.4BK
+
+Settings/*
+!Settings/.gitignore
+!Settings/directory.json
+
+#ignorer les images/fichiers html pour tailwind
+BWEB/images/*
+BWEB/modules/*.html
+BWEB/tailwindCss/*
+
+# ignore les dossier de preférences
+userPreferences.*/
+
+WebFolder/images/*
+!WebFolder/images/.gitignore
+
+#.gitignore
+WebFolder/tpl/*/cache/
+!WebFolder/tpl/*/cache/.gitignore
+
+# ignore les fichiers Mac .DS_Store
+*.DS_Store
+
+#ignore les réglages de BuildApp
+buildApp.4DSettings
+
+#ignore le dossier cache ressource
+Resources/Cache/*
+!Resources/Cache/.gitignore
+Resources/json/WEB_PARAMETERS
+Resources/json/DEV_PARAMETERS_*
+Resources/php.ini
+
+#ignore des compiles
+Project/Sources/Methods/Compiler_*
+
+# Libraries
+Libraries/
+
+# a retiré si pas shell car on ne git pas le folder dans le shell
+Project/Sources/folders.json
+WebFolder/race/*
+
+WebFolder/pdf/*
+WebFolder/.well-known/*
+
+#Fichier spécifiques au projet
+backupHistory.json

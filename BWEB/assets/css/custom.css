@@ -1,0 +1,30 @@
+.font-figtree-normal {
+  font-family: "Edu NSW ACT Hand Pre", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+[blocname="slider"] [bspk="wrapper"]{
+  max-width:300px;
+}
+[blocname="headerSafari"]{
+  background: url('/images/elephants-1693280_1280.jpg');
+  background-size: cover;
+  background-position: center center;
+  
+}
+[blocname="menuhead"]{
+background-color: rgba(255, 255, 255, 0.5);
+}
+h1{
+  font-size: 24px;
+  font-weight: 600;
+}
+h2{
+  font-size: 22px;
+  font-weight: 600;
+}
+h3{
+  font-size: 20px;
+  font-weight: 600;
+}

@@ -1,0 +1,1 @@
+{"privileges":[{"privilege":"none","includes":[]}],"roles":[],"permissions":{"allowed":[{"applyTo":"ds","type":"datastore","read":["guest"],"create":["guest"],"update":["guest"],"drop":["guest"],"describe":["guest"],"execute":["guest"],"promote":["guest"]}]},"forceLogin":true}

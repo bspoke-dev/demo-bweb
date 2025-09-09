@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="3">
+	<com.4d>
+		<web>
+			<standalone_server>
+				<configuration>
+					<hosts>
+						<host home_page="" html_root="./bweb" id="0" name="default"/>                      </hosts>                  </configuration>              </standalone_server>          </web>
+		<general allow_user_settings="true"/>      </com.4d>  </preferences>
