@@ -1,0 +1,6 @@
+*** Full Backup aborted
+Error reported : Backup canceled by user.
+Scheduled : 00/00/0 00:00
+Starting : 08/09/2025 20:05
+Ending : 08/09/2025 20:05
+

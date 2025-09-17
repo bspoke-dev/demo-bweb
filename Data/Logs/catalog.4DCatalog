@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="Demo1" uuid="673801BC79A68D4A81A83795816666F3" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="BSPK_TABLE_TEMPLATE" uuid="F62FD78E6FE5D242A0581974276A4917" id="1">
+		<field name="modifiedBy" uuid="6FC09B79BAF3824881A9806B3396E57A" type="10" limiting_length="30" id="1"/>
+		<field name="modifiedOn" uuid="C59AD99F2DADFC4F8D40C5415A0A505F" type="10" limiting_length="24" id="2"/>
+		<field name="createdBy" uuid="94374CB9CC6301469A1B8B8AAC992997" type="10" limiting_length="30" id="3"/>
+		<field name="createdOn" uuid="72AA3EEF3A69824282FFB9F4E7EE5209" type="10" limiting_length="24" never_null="true" id="4"/>
+		<field name="uuidKey" uuid="2A34572EC0F8B647AAA15E80E27079B2" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="5"/>
+		<primary_key field_name="uuidKey" field_uuid="2A34572EC0F8B647AAA15E80E27079B2"/>
+	</table>
+	<table name="BSPK" uuid="83F81B04A2960B4E8C605CB49F390E87" id="2">
+		<field name="componentName" uuid="8F2C3990FE0ADD4085895B7ACBBF37EE" type="10" limiting_length="32" id="1"/>
+		<field name="currentVersion" uuid="B5873A1FAB1AC04B95A48BE0CA861096" type="4" id="2"/>
+		<field name="uuidKey" uuid="A759C4A68B5EB748B21FEA66CBE43268" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="3"/>
+		<primary_key field_name="uuidKey" field_uuid="A759C4A68B5EB748B21FEA66CBE43268"/>
+	</table>
+	<table name="BSPK_ERROR" uuid="24EDA3C04E10E24C940762B8C4CE04E3" id="3">
+		<field name="needSended" uuid="CF28E7B7071EC844A21946CE22AB059A" type="1" never_null="true" id="1"/>
+		<field name="counter" uuid="F292E6D32FDB084486D2919E49B5A784" type="4" never_null="true" id="2"/>
+		<field name="processName" uuid="70FAA44DE89610489A98E8CBE7B8C597" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="screenShotBase64" uuid="A7DB3E8548FFCD409B3D7C2397A5D35C" type="14" never_null="true" id="4" outside_blob="true"/>
+		<field name="web" uuid="B6775883D12C954ABAE8D85B6281B1E2" type="21" blob_switch_size="2147483647" never_null="true" id="5"/>
+		<field name="callChain" uuid="369DE971E36EAB44964E28DF488A1166" type="21" blob_switch_size="2147483647" never_null="true" id="6"/>
+		<field name="transactionLevel" uuid="396D1D6276C2E94A847D4B5E2254A44E" type="4" never_null="true" id="7"/>
+		<field name="stack" uuid="D0897768F431774F85AD79FFA1FF18A6" type="10" never_null="true" id="8"/>
+		<field name="formula" uuid="ACE8876DB16AE64A9C97D1F5A8D099A6" type="10" limiting_length="255" never_null="true" id="9"/>
+		<field name="method" uuid="3529E64BA40BF443BB11DF97A73FBD99" type="10" limiting_length="255" never_null="true" id="10"/>
+		<field name="machine" uuid="8CFB71D3301E2A4E812525A9E3A2657B" type="10" limiting_length="255" never_null="true" id="11"/>
+		<field name="line" uuid="7272D728F1BE2541A3D139E143CCE157" type="4" never_null="true" id="12"/>
+		<field name="isCompiled" uuid="50B88AAC3BA8E047A8D64A9A9D394F76" type="1" never_null="true" id="13"/>
+		<field name="errorCode" uuid="805DFF5668457C4CA48D65B2997F5530" type="4" never_null="true" id="14"/>
+		<field name="createdBy" uuid="B470F437FE379B438736A48BB2EEB84D" type="10" limiting_length="30" never_null="true" id="15"/>
+		<field name="createdOn" uuid="1F46D5410B078442834675BAF5DEDF60" type="10" limiting_length="24" never_null="true" id="16"/>
+		<field name="uuidKey" uuid="34D2ACD5969BFA47B5DD1FD36DACEC77" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="17"/>
+		<primary_key field_name="uuidKey" field_uuid="34D2ACD5969BFA47B5DD1FD36DACEC77"/>
+	</table>
+	<table name="BSPK_FILE" uuid="70F149DCBDA0BA429080797CA59DE69D" id="4">
+		<field name="originalBase64" uuid="4851C32E00BFDA498D3DD3465A3EA502" type="14" never_null="true" id="1" outside_blob="true"/>
+		<field name="docType" uuid="B69D4426102D7646AD902638AA3ECEB2" type="10" limiting_length="4" never_null="true" id="2"/>
+		<field name="originalSizeFormat" uuid="03466E735FECF04EA9BCB7046ECBEF76" type="10" limiting_length="126" never_null="true" id="3"/>
+		<field name="realSize" uuid="09F527F97DDBEB4C8F1BF625FF35E9F3" type="6" never_null="true" id="4"/>
+		<field name="folderPath" uuid="6E060664AFE71342A98F20F6FF3563B5" type="10" never_null="true" id="5"/>
+		<field name="originalBlob" uuid="3941A497B231AF4FAAE4DA91DBFF0251" type="18" never_null="true" id="6" outside_blob="true"/>
+		<field name="alt" uuid="915E5AAE8E116547BDC9C58BB9CDFF2E" type="10" limiting_length="255" never_null="true" id="7"/>
+		<field name="copyright" uuid="826921CDB1C82D489C48A26CF0FE99FB" type="10" limiting_length="62" never_null="true" id="8"/>
+		<field name="thumbnail" uuid="6A93DA2F0C8F41468C9B0F228CEB161C" type="12" never_null="true" id="9"/>
+		<field name="title" uuid="B19B019299BA2F43800CC3E9A0DF3DF4" type="10" limiting_length="126" never_null="true" id="10"/>
+		<field name="tags" uuid="7E27BDD31F019A4AAB404AE0C64EDE54" type="10" never_null="true" id="11"/>
+		<field name="legend" uuid="9D83E998F77EC549A108C8607C349301" type="10" never_null="true" id="12"/>
+		<field name="modifiedBy" uuid="610D429CBCC90448A81630352936FBC3" type="10" limiting_length="31" never_null="true" id="13"/>
+		<field name="modifiedOn" uuid="EA3421DE77A2F54F8E724B12A929D831" type="10" limiting_length="20" never_null="true" id="14"/>
+		<field name="createdBy" uuid="452C6A73A55CD94CB417C255A288B00A" type="10" limiting_length="31" never_null="true" id="15"/>
+		<field name="createdOn" uuid="4248835FB916454F8BFF718FCA6B03DD" type="10" limiting_length="20" never_null="true" id="16"/>
+		<field name="uuidKey" uuid="F9A4FE2E6A756146A964D8BD1D71E7A8" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="17"/>
+		<primary_key field_name="uuidKey" field_uuid="F9A4FE2E6A756146A964D8BD1D71E7A8"/>
+	</table>
+	<table name="BSPK_HISTORY" uuid="AF2636A7A8A6A5479911F4B8299B0A20" id="5">
+		<field name="groupUuid" uuid="5120013B5687E043885418C92AC55FCD" type="10" store_as_UUID="true" id="1"/>
+		<field name="syncError" uuid="77F0E2D5E1758F429A4C9F2BE2242FF7" type="10" never_null="true" id="2"/>
+		<field name="codeAction" uuid="56B9CE65A3790845BD169908C67BCCCB" type="10" limiting_length="11" never_null="true" id="3"/>
+		<field name="recordInfos" uuid="570596F6E055E04D8BFF61FD2AF78005" type="21" blob_switch_size="2147483647" never_null="true" id="4"/>
+		<field name="newValues" uuid="9FC2881685A1A34A941898899A3598A6" type="21" never_null="true" id="5"/>
+		<field name="oldValues" uuid="4AF913CDFC557A4DBB17388D621487DD" type="21" id="6"/>
+		<field name="isSync" uuid="5B5533F5D35BA3469808577350B454E3" type="1" never_null="true" id="7"/>
+		<field name="createdBy" uuid="6CADB1C1AA10AA45ACC4F218E70ED170" type="10" limiting_length="30" never_null="true" id="8"/>
+		<field name="createdOn" uuid="678CD8E99706F04FA15B649747548BD6" type="10" limiting_length="24" never_null="true" id="9"/>
+		<field name="uuidKey" uuid="0681B13E5E3E434183F850D09F2F3F6B" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="10"/>
+		<primary_key field_name="uuidKey" field_uuid="0681B13E5E3E434183F850D09F2F3F6B"/>
+	</table>
+	<table name="BSPK_IPN" uuid="B799018BB215DA4D95294CDDD56599B0" id="6">
+		<field name="replay" uuid="6DD0D1BDAAE9AE4CB122CA385D0E8561" type="1" never_null="true" id="1"/>
+		<field name="recurrenceNumber" uuid="F517C713782BB640ADCFBF1B6781B71B" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="operationType" uuid="E69345A13C8E644EBB92C2BE116A2D5E" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="occurenceType" uuid="10268ED6F711C44A90ECE084101D531C" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="token" uuid="B892BB52E6F9EA4D8CCEC11F5E211451" type="10" limiting_length="255" never_null="true" id="5"/>
+		<field name="status" uuid="F2A567DAF18D6C4E84647DF6A876909B" type="10" limiting_length="255" never_null="true" id="6"/>
+		<field name="amount" uuid="979880C620AB0F41831045A2D0FFB3EF" type="6" never_null="true" id="7"/>
+		<field name="ipn" uuid="16200592747F9147957B6A655F1391AB" type="21" blob_switch_size="2147483647" never_null="true" id="8"/>
+		<field name="dateTime" uuid="C641ACEA24B79642A4E50D87DAD9E3D0" type="10" limiting_length="24" never_null="true" id="9"/>
+		<field name="modifiedBy" uuid="75EF34FA4B12664B90DE8DA2FDDA138C" type="10" limiting_length="30" id="10"/>
+		<field name="modifiedOn" uuid="EEFF4B99C1DD2D43B4DDECFA3841DC66" type="10" limiting_length="24" id="11"/>
+		<field name="createdBy" uuid="DB430D7B6C709949ADDF99C3F72C094D" type="10" limiting_length="30" id="12"/>
+		<field name="createdOn" uuid="2B4B68A73CA0044BA514E9D5B41E3FCE" type="10" limiting_length="24" never_null="true" id="13"/>
+		<field name="uuidKey" uuid="4399FC05BA843940B9AA42BB380F2145" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="14"/>
+		<primary_key field_name="uuidKey" field_uuid="4399FC05BA843940B9AA42BB380F2145"/>
+	</table>
+	<table name="BSPK_LIST" uuid="FA30AE13D6F3474AB0DFC48FF211EF25" id="7">
+		<field name="modifiedOn" uuid="38F3710EF905F34F8E27F5D4AB6483AE" type="10" limiting_length="24" never_null="true" id="1"/>
+		<field name="modifiedBy" uuid="3D4952DE5769BD448D442E6E2C5D6EFD" type="10" limiting_length="30" never_null="true" id="2"/>
+		<field name="createdBy" uuid="F3FA9BFFD648D0449D454B29757BC315" type="10" limiting_length="30" never_null="true" id="3"/>
+		<field name="createdOn" uuid="020E99E7530D6441926430624E92521C" type="10" limiting_length="24" never_null="true" id="4"/>
+		<field name="sortOrder" uuid="6385ADAE5C9EFE418D124272A508BD96" type="4" never_null="true" id="5"/>
+		<field name="langValue" uuid="2707F959A37DFD43AFB035E9F1B6814C" type="21" blob_switch_size="2147483647" never_null="true" id="6"/>
+		<field name="value" uuid="9A3DF8CE44B0704881FA0E6D8F94FA3E" type="10" limiting_length="31" never_null="true" id="7"/>
+		<field name="reference" uuid="257F710675A46A43812999D48894639A" type="10" limiting_length="31" never_null="true" id="8"/>
+		<field name="masterListUuid" uuid="F67A534024FFF94A9E707FB36F1B5F17" type="10" store_as_UUID="true" id="9"/>
+		<field name="uuidKey" uuid="6BF12D42D845434A92AFEC5A933AA9C2" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="10"/>
+		<primary_key field_name="uuidKey" field_uuid="6BF12D42D845434A92AFEC5A933AA9C2"/>
+	</table>
+	<table name="BSPK_PARAM_LIST" uuid="DD6527BFBE57F347AFF503F161A26087" id="8">
+		<field name="isOrderAlpha" uuid="C36AE80D5182E3488578E53F603CDF78" type="1" never_null="true" id="1"/>
+		<field name="linkedFields" uuid="9911B97CEB9DC044883E7D6FD4FBC0B7" type="21" blob_switch_size="2147483647" never_null="true" id="2"/>
+		<field name="isOpen" uuid="98CC47A868BC054890C3B98D55CA08E6" type="1" never_null="true" id="3"/>
+		<field name="langDesignation" uuid="0C1096B99D106A469FFA6ADA1D80F2B7" type="21" blob_switch_size="2147483647" never_null="true" id="4"/>
+		<field name="langDescription" uuid="EF5EF7B63B0F8541978FCBC7C56B895C" type="21" blob_switch_size="2147483647" never_null="true" id="5"/>
+		<field name="referenceList" uuid="9B8EAAF6D2578048B2CB8218E6440E61" type="10" limiting_length="31" never_null="true" id="6"/>
+		<field name="modifiedOn" uuid="86544900A83D95428D93BCEC8FBBD762" type="10" limiting_length="24" never_null="true" id="7"/>
+		<field name="modifiedBy" uuid="9BA9EBEAFF6B4543822573E1441E7398" type="10" limiting_length="30" never_null="true" id="8"/>
+		<field name="createdBy" uuid="F0BF923E46B442439537C70A91C58F27" type="10" limiting_length="30" never_null="true" id="9"/>
+		<field name="createdOn" uuid="A471B2BC27E6F14AB61CB48EF0EB2FED" type="10" limiting_length="24" never_null="true" id="10"/>
+		<field name="uuidKey" uuid="4C73186061B7AE419AF78E3A09DC779E" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="11"/>
+		<primary_key field_name="uuidKey" field_uuid="4C73186061B7AE419AF78E3A09DC779E"/>
+	</table>
+	<table name="BSPK_TASK_MANAGER" uuid="8D4B487514F3494BA0FF36AFCFE8F452" id="9">
+		<field name="lastExecutionStatus" uuid="7F50A53A1D7AB2419B9811156B00600E" type="1" never_null="true" id="1"/>
+		<field name="executeOnStartup" uuid="9CAD3AD11DAB584CB5E4981C47FB8753" type="1" never_null="true" id="2"/>
+		<field name="force" uuid="31261784109B734FAF0B16EA76A27380" type="1" never_null="true" id="3"/>
+		<field name="actif" uuid="49547BE98BD49B44A812B8C9E3936406" type="1" never_null="true" id="4"/>
+		<field name="lastExecute" uuid="04A65D8AC24FC54FBF7DF65374CE1338" type="10" limiting_length="24" never_null="true" id="5"/>
+		<field name="period" uuid="CC9FE14714799C4EADC0CDDBBCFB8C24" type="10" limiting_length="126" never_null="true" id="6"/>
+		<field name="param" uuid="915ABBEE5992EC45910FA3117B678603" type="21" never_null="true" id="7"/>
+		<field name="method_name" uuid="49BF923A6870174AA02BA00D83B7BB48" type="10" limiting_length="31" never_null="true" id="8"/>
+		<field name="name" uuid="E5F0FAB149D6A347B55E509F269EFCFD" type="10" limiting_length="31" never_null="true" id="9"/>
+		<field name="uuidKey" uuid="48159F17FC0E9641993034A74AFA6A88" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="10"/>
+		<field name="executeOnDev" uuid="B0E0A5E7BE005D40982432EDDAD3BEEA" type="1" never_null="true" id="11"/>
+		<primary_key field_name="uuidKey" field_uuid="48159F17FC0E9641993034A74AFA6A88"/>
+	</table>
+	<table name="BSPK_USER_PROCESS" uuid="8622228E430F324987602499041FF9D6" id="10">
+		<field name="info" uuid="CACEFAD797AC7B488FD2A2538011E8F0" type="21" blob_switch_size="2147483647" never_null="true" id="1" hide_in_REST="true"/>
+		<field name="window" uuid="5A0DDCC685A8AA41A4C734058C93ACF8" type="4" never_null="true" id="2" hide_in_REST="true"/>
+		<field name="process" uuid="B66D81AD3BC4654FB8D7909DCF360CF0" type="4" never_null="true" id="3"/>
+		<field name="registerClientName" uuid="F16DFE19047BB543A272F68E8201C46F" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="uuidKey" uuid="594BFE6C9DEB724A925D0F04CAA684ED" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="5"/>
+		<primary_key field_name="uuidKey" field_uuid="594BFE6C9DEB724A925D0F04CAA684ED"/>
+	</table>
+	<table name="BSPK_WEB_COOKIE_CONSENT" uuid="4AB2296E63D2C64E94AFECF9E5A6BE55" id="11">
+		<field name="isOpen" uuid="D536F73ED4E0AE47AA3188707F88F230" type="1" never_null="true" id="1"/>
+		<field name="designation" uuid="D280737F58EBA547B67C71C890627FB2" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="referenceList" uuid="49E79BA155DDAC4D84CDD428764AD967" type="10" limiting_length="31" never_null="true" id="3"/>
+		<field name="modifiedOn" uuid="7CFFC5FC3508DD43A6BF6CDF7A0D756D" type="10" limiting_length="24" never_null="true" id="4"/>
+		<field name="modifiedBy" uuid="86A0247FBFE59B4F92A43F9453468B97" type="10" limiting_length="30" never_null="true" id="5"/>
+		<field name="createdBy" uuid="F01CF9190986CC4CAC96D24D812A306D" type="10" limiting_length="30" never_null="true" id="6"/>
+		<field name="createdOn" uuid="2DAAE87F729E46469B91611BD9DC313F" type="10" limiting_length="24" never_null="true" id="7"/>
+		<field name="consent" uuid="26C965ED6AEA434FAFD208D55E735368" type="21" blob_switch_size="2147483647" never_null="true" id="8"/>
+		<field name="uuidKey" uuid="7565EC3EECAD0D47AEBE359BA9A92A73" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="9"/>
+		<field name="description" uuid="9576826C6973E944963F462303AE04AF" type="10" never_null="true" id="22"/>
+		<primary_key field_name="uuidKey" field_uuid="7565EC3EECAD0D47AEBE359BA9A92A73"/>
+	</table>
+	<table name="BSPK_USER" uuid="780691696A28A244B5C7AAA53BE2064B" id="12">
+		<field name="lastLogin" uuid="3B8174A9B05693488FB9DFAD23DE3403" type="10" limiting_length="24" id="1"/>
+		<field name="password" uuid="0E3C25959C3381478F6BF96526A7B168" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="active" uuid="F8D006197C6973409655772BA776307D" type="1" never_null="true" id="3"/>
+		<field name="code" uuid="46B05A366BF3C54B8CEBCE24B064C87B" type="10" limiting_length="30" never_null="true" id="4"/>
+		<field name="firstName" uuid="FF5CA91B561C204198869B1A88823C6A" type="10" limiting_length="31" never_null="true" id="5"/>
+		<field name="lastName" uuid="31E34244631BDD4A8FF0F055D0D191B2" type="10" limiting_length="31" never_null="true" id="6"/>
+		<field name="prefs" uuid="5746CF57766959468244F5CFBDB272C1" type="10" never_null="true" id="7"/>
+		<field name="lang" uuid="3F777805636E0C41B51AA5DE3C1FCF18" type="10" limiting_length="2" never_null="true" id="8" hide_in_REST="true"/>
+		<field name="userGroupUuid" uuid="DB3C90AECEEF6640A3217A4C05C05FAA" type="10" store_as_UUID="true" id="9"/>
+		<field name="email" uuid="ADB2E604F93ECC41B4F6F7D742315648" type="10" limiting_length="62" never_null="true" id="10"/>
+		<field name="preferences" uuid="31ADB9880D81174DAC16315B4F1303D2" type="21" blob_switch_size="2147483647" never_null="true" id="11"/>
+		<field name="modifiedBy" uuid="178BAB826CED024688656C4C62A6F793" type="10" limiting_length="30" id="12"/>
+		<field name="modifiedOn" uuid="60BA4E2ADA5EB441B2C1D54D6094465B" type="10" limiting_length="24" id="13"/>
+		<field name="createdBy" uuid="BF960EC7C69933438480FA10713EF301" type="10" limiting_length="30" id="14"/>
+		<field name="createdOn" uuid="48E6C7BE2B9FCA42BBBBBE2D3074895B" type="10" limiting_length="24" never_null="true" id="15"/>
+		<field name="uuidKey" uuid="8306722F53C06E468D261A3242D817D8" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="16"/>
+		<primary_key field_name="uuidKey" field_uuid="8306722F53C06E468D261A3242D817D8"/>
+	</table>
+	<table name="BSPK_USER_MEMBERSHIP" uuid="43C7B2C91E26DF4EB0CB58A02F473512" id="13">
+		<field name="groupUuid" uuid="9698EF8ACF38FC4A93C8E4D62F240488" type="10" store_as_UUID="true" never_null="true" id="1"/>
+		<field name="userUuid" uuid="2B51E5D0EF40E94986D5F14002640E09" type="10" store_as_UUID="true" never_null="true" id="2"/>
+		<field name="uuidKey" uuid="7D5F76D78AD6064F8A993174D61C6FD1" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="3"/>
+		<primary_key field_name="uuidKey" field_uuid="7D5F76D78AD6064F8A993174D61C6FD1"/>
+	</table>
+	<table name="BSPK_USER_GROUP" uuid="285381B82ADE7147821BF7C01017CBF8" id="14">
+		<field name="name" uuid="FC0981B23021A244A33F0CDC810DB73D" type="10" limiting_length="31" never_null="true" id="1"/>
+		<field name="uuidKey" uuid="22529171E1962043B19D6D98FD908B90" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="2"/>
+		<primary_key field_name="uuidKey" field_uuid="22529171E1962043B19D6D98FD908B90"/>
+	</table>
+	<table name="BSPK_USER_RIGHT_RULE" uuid="EE48D1B672AB324382C7FD954AE4E987" id="15">
+		<field name="userGroupUuid" uuid="7AD4D378AFD4DB4A87A52A511A588D62" type="10" store_as_UUID="true" never_null="true" id="1"/>
+		<field name="userRightUuid" uuid="A635D5B0F959134B9C135DF59D10D159" type="10" store_as_UUID="true" never_null="true" id="2"/>
+		<field name="uuidKey" uuid="8F1E2EA45E406345A5F56061AF6234B2" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="3"/>
+		<primary_key field_name="uuidKey" field_uuid="8F1E2EA45E406345A5F56061AF6234B2"/>
+	</table>
+	<table name="BSPK_USER_RIGHT" uuid="8B2FC73B8D79E748A5115747C80B917C" id="16">
+		<field name="langName" uuid="8A30F7F6CFC46343901C5A622CC160BD" type="21" never_null="true" id="1"/>
+		<field name="ref" uuid="17D6EC662C79CC449591F5DD977FBE43" type="10" limiting_length="255" unique="true" never_null="true" id="2"/>
+		<field name="uuidKey" uuid="9D9BD5914BF7BE4BA285339B10B703A7" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="3"/>
+		<primary_key field_name="uuidKey" field_uuid="9D9BD5914BF7BE4BA285339B10B703A7"/>
+	</table>
+	<table name="BSPK_WEB_DOMAIN" uuid="C37A4087E87DBD40BD7258EC3CC76C27" id="17">
+		<field name="templateType" uuid="EFA6184D3AA12E469EBBB5A5F29C45FD" type="4" never_null="true" id="1"/>
+		<field name="templateOptions" uuid="0D296B9D318CDA4B8C302EB409B541F7" type="21" blob_switch_size="2147483647" id="2"/>
+		<field name="useWebApp" uuid="6D9D1A63F771DE409A93DAF09311537D" type="1" never_null="true" id="3"/>
+		<field name="botDisalow" uuid="F81FC9FF496F0844AD6B3FF75FEC05FD" type="1" id="4"/>
+		<field name="userRightUuid" uuid="5BD1949C0B942541B9FE144819627876" type="10" store_as_UUID="true" id="5"/>
+		<field name="googleTagManager" uuid="F7F4F9B106EECD478810957CC4423978" type="10" limiting_length="30" never_null="true" id="6"/>
+		<field name="googleAnalytics" uuid="32D9FDD3805EA2488E06102F500DC85D" type="10" never_null="true" id="7"/>
+		<field name="metaTags" uuid="D66309B98AF4C84F9EB33BBF5FDE3CAF" type="21" blob_switch_size="2147483647" id="8"/>
+		<field name="loginPageUuid" uuid="AB05BED3910BDC47BB94E62CE21F8879" type="10" store_as_UUID="true" id="9"/>
+		<field name="name" uuid="99EB4A68F7AF744EB71422D37599B0BD" type="10" limiting_length="255" never_null="true" id="10"/>
+		<field name="params" uuid="8FD3AAA817BDBD4B9FF2AB1A25082FE4" type="21" never_null="true" id="11"/>
+		<field name="modifiedBy" uuid="7D5F96DCD9CD324F93085E91C794410B" type="10" limiting_length="30" id="12"/>
+		<field name="modifiedOn" uuid="6BE8FABAD4DA584FAFDBE5F30DF8E303" type="10" limiting_length="24" id="13"/>
+		<field name="createdBy" uuid="C6B36C0CCC8B9B4096EC3B159AA45F42" type="10" limiting_length="30" id="14"/>
+		<field name="createdOn" uuid="E1135D5E5446C84FBC88E7D809F24B13" type="10" limiting_length="24" never_null="true" id="15"/>
+		<field name="uuidKey" uuid="B8616D9CEDF02A48BBE4216F16A582C1" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="16"/>
+		<primary_key field_name="uuidKey" field_uuid="B8616D9CEDF02A48BBE4216F16A582C1"/>
+	</table>
+	<table name="BSPK_WEB_DOMAIN_LANG" uuid="DA5412040C6EB54EA83EB1D0EE83D201" id="18">
+		<field name="isDefault" uuid="D4A226C3167C0245B06C0A85DBD00FBF" type="1" never_null="true" id="1"/>
+		<field name="name" uuid="27DEA0D84FADE14697FC8518247C3998" type="10" id="2"/>
+		<field name="lang" uuid="9707A0F75CE2DF4EBC1173E59196ADEF" type="10" limiting_length="2" never_null="true" id="3"/>
+		<field name="webDomainUuid" uuid="11D5799B0F7D434F8D99095CA4585B52" type="10" store_as_UUID="true" never_null="true" id="4"/>
+		<field name="uuidKey" uuid="46F8800A4B788748A9C4CFC4171BF474" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="5"/>
+		<primary_key field_name="uuidKey" field_uuid="46F8800A4B788748A9C4CFC4171BF474"/>
+	</table>
+	<table name="BSPK_WEB_DOMAIN_MENU_SHARED" uuid="1D5E09AB284F7547914EDEA9C3F0D1DE" id="19">
+		<field name="webDomainMenuUuid" uuid="33DE7F9CEB0F4D4FA28430B7943ABF30" type="10" store_as_UUID="true" id="1"/>
+		<field name="webDomainUuid" uuid="040C67CA1170AC488F323BD83A8A2D7F" type="10" store_as_UUID="true" id="2"/>
+		<field name="uuidKey" uuid="631F00C7DE13044D97A94CDB8AE57327" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="3"/>
+		<primary_key field_name="uuidKey" field_uuid="631F00C7DE13044D97A94CDB8AE57327"/>
+	</table>
+	<table name="BSPK_WEB_REDIRECT" uuid="751F7B9157EF474A9A5DCB6CD9A9EFB9" id="20">
+		<field name="webDomainUuid" uuid="234CA034CB60584C80A4A56A7B0D1175" type="10" store_as_UUID="true" never_null="true" id="1"/>
+		<field name="permanent" uuid="94CE33A6115D9E4388C43297A5F99D8D" type="1" never_null="true" id="2"/>
+		<field name="redirectUrl" uuid="682716D4C408A34BB9FECE51A95E3F38" type="10" limiting_length="255" id="3"/>
+		<field name="oldUrl" uuid="2B1AA8EAC7E98C45A8FB25B79D951AC0" type="10" limiting_length="255" id="4"/>
+		<field name="uuidKey" uuid="F7E9A59535B27A469025359C63F7353F" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="5"/>
+		<primary_key field_name="uuidKey" field_uuid="F7E9A59535B27A469025359C63F7353F"/>
+	</table>
+	<table name="BSPK_WEB_DOMAIN_MENU_PARAMETER" uuid="B4E04C2AE07A364DA0AAFD34EFFCED4A" id="21">
+		<field name="sortOrder" uuid="2624F3AD3723C643AF7EFDC9294A349D" type="4" id="1"/>
+		<field name="webDomainMenuUuid" uuid="454CC1FE95F9A04EB969371E2A1EEF16" type="10" store_as_UUID="true" never_null="true" id="2"/>
+		<field name="tableName" uuid="70AC488E2458044590BA0A4C4D8B5EDD" type="10" limiting_length="255" id="3"/>
+		<field name="fieldName" uuid="7940E86B6671F94E91E5B85300469BBA" type="10" limiting_length="255" id="4"/>
+		<field name="processVariableName" uuid="CB56A874BA69F547B74914D2842D7BB4" type="10" limiting_length="255" id="5"/>
+		<field name="name" uuid="A76F6CD0AED103489082BDEE50BE01DE" type="10" limiting_length="255" id="6"/>
+		<field name="uuidKey" uuid="52271B052201DB40BDAEF454BE1B1E31" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="7"/>
+		<primary_key field_name="uuidKey" field_uuid="52271B052201DB40BDAEF454BE1B1E31"/>
+	</table>
+	<table name="BSPK_WEB_DOMAIN_MENU" uuid="4521A9AD6A929043B66AFDA8B6B1612E" id="22">
+		<field name="name" uuid="307651C59F79414EB9B126412259A784" type="10" limiting_length="255" never_null="true" id="1"/>
+		<field name="category" uuid="070FD46A20DEB3408F61440493161B93" type="10" limiting_length="255" id="2"/>
+		<field name="urlParts" uuid="7E85F7DA37051B4E88F9DD3743CD105B" type="4" id="3"/>
+		<field name="sortOrder" uuid="23170F0E887B4344A23C41C487ECD509" type="4" never_null="true" id="4"/>
+		<field name="autoUpdate" uuid="5E12181FCCFD8540B6BA483198C64F3C" type="1" id="5"/>
+		<field name="useName" uuid="38A61620AD71A049A798D025FAF00643" type="1" id="6"/>
+		<field name="displayInMenu" uuid="1D37A48019BD8047B03A7BA60F0BC8D1" type="1" id="7"/>
+		<field name="botDisalow" uuid="D65E67756C61A74B889068B9B4A3A124" type="1" id="8"/>
+		<field name="languageOptions" uuid="07AF8E7E4A5C4349A3B4737FAE9390A1" type="21" blob_switch_size="2147483647" id="9"/>
+		<field name="metaTags" uuid="0354374E2F0DFC4F8285FF1FA8BCD62C" type="21" blob_switch_size="2147483647" id="10"/>
+		<field name="icon" uuid="4D5CF71B4C954E4AA2713C0E19D3A2AE" type="10" limiting_length="255" id="11"/>
+		<field name="tableName" uuid="C364CF9C57554D43AE61F1C7DC542BAC" type="10" limiting_length="255" id="12"/>
+		<field name="userRightUuid" uuid="F6003294BF819743816721BE287227B9" type="10" store_as_UUID="true" id="13"/>
+		<field name="publishEnd" uuid="020F3C5CDBD9B14F8618A18C0B59EEB1" type="8" id="14"/>
+		<field name="publishStart" uuid="4B3D68C474032C41A0710239F753FAEB" type="8" id="15"/>
+		<field name="isHomepage" uuid="200009EFC77F5F49B8637ED15D370BF9" type="1" id="16"/>
+		<field name="publish" uuid="03095A1B47F81A49981DEC841CB8257F" type="1" never_null="true" id="17"/>
+		<field name="parentUuid" uuid="A72919176885A745946E2C6E573C495F" type="10" store_as_UUID="true" id="18"/>
+		<field name="webDomainUuid" uuid="9BEBBFF5FAF176468138C1DACA38485D" type="10" store_as_UUID="true" id="19"/>
+		<field name="uuidKey" uuid="01F1C6DC4DD864498B207FBEDE761070" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="20"/>
+		<primary_key field_name="uuidKey" field_uuid="01F1C6DC4DD864498B207FBEDE761070"/>
+	</table>
+	<table name="BSPK_WEB_LIST" uuid="928FA9C6C389834A8BCE3B0136B81B51" id="23">
+		<field name="structure" uuid="36C5DD8A08356643A6747182DA8913AC" type="21" blob_switch_size="2147483647" id="1"/>
+		<field name="name" uuid="262127E1F9C81E419709E6C559ED8A68" type="10" limiting_length="255" id="2"/>
+		<field name="webDomainUuid" uuid="FA8A7B773CCD1E4EBE1A62C186999370" type="10" store_as_UUID="true" id="3"/>
+		<field name="modifiedBy" uuid="B0326BD4BE39894D8282D0EE99455A7B" type="10" limiting_length="30" id="4"/>
+		<field name="modifiedOn" uuid="4C2153ECC20E0E479234C1C3D833083C" type="10" limiting_length="24" id="5"/>
+		<field name="createdBy" uuid="B4453C3811CB7C4C9C9AE6927DEC0EBB" type="10" limiting_length="30" id="6"/>
+		<field name="createdOn" uuid="527E3C038DDFBE42BD0578AF0DB7A999" type="10" limiting_length="24" never_null="true" id="7"/>
+		<field name="uuidKey" uuid="B4BBBCE295DE3C4085A5ED8F426ACB58" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="8"/>
+		<primary_key field_name="uuidKey" field_uuid="B4BBBCE295DE3C4085A5ED8F426ACB58"/>
+	</table>
+	<table name="BSPK_WEB_CONTENT" uuid="A650681E049DDA4DBE484AF6FF5E12DB" id="24">
+		<field name="modifiedBy" uuid="DBA72A5B6F7C9042A383B61ED6D2BB93" type="10" limiting_length="255" id="1"/>
+		<field name="modifiedOn" uuid="0F53A563A03A3E48B8E7EBBC76DAB178" type="10" limiting_length="255" id="2"/>
+		<field name="createdBy" uuid="CA57477F08FD2D45BF5D051A89D9DECC" type="10" limiting_length="255" id="3"/>
+		<field name="createdOn" uuid="EB09A9280515DD4199857EF03F2A09FA" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="cssProperties" uuid="9DD7CC67745E724688D9BDDEFE66D632" type="21" blob_switch_size="2147483647" id="5"/>
+		<field name="blockProperties" uuid="A38DDA2808E46B4C95795C750ACE0B09" type="21" blob_switch_size="2147483647" id="6"/>
+		<field name="parentCollection" uuid="9E7F81C384DC4B4F8E9A55252A0402E0" type="14" never_null="true" id="7"/>
+		<field name="webDomainMenuUuid" uuid="BB06B4BDAEE13B4B940D453F5B6516B8" type="10" store_as_UUID="true" id="8"/>
+		<field name="sortOrder" uuid="42A9E4A989CCD340AD28F301E8B073F8" type="6" never_null="true" id="9"/>
+		<field name="objectProperties" uuid="2781E55DD580C74D882620ED76347DA7" type="21" blob_switch_size="2147483647" id="10"/>
+		<field name="htmlProperties" uuid="044AF8B25304B74282174E3694561AC9" type="21" blob_switch_size="2147483647" id="11"/>
+		<field name="parentUuid" uuid="9001CA24FF0BBF45B25DC758AEF0BE41" type="10" store_as_UUID="true" id="12"/>
+		<field name="constraints" uuid="5CC95CE04F331C40929C160017E5D1FB" type="21" blob_switch_size="2147483647" id="13"/>
+		<field name="events" uuid="5A6FEDAC7553A347BA95672A8EA30246" type="21" blob_switch_size="2147483647" id="14"/>
+		<field name="type" uuid="4BC115B05305054DA779675993D45EEF" type="10" limiting_length="255" never_null="true" id="15"/>
+		<field name="blockName" uuid="73F2A15C90C1324BB66D12FDEC6CD8E8" type="10" limiting_length="255" never_null="true" id="16"/>
+		<field name="uuidKey" uuid="BFB1CDD8F8938F4EAB1210E16CAE8927" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="17"/>
+		<primary_key field_name="uuidKey" field_uuid="BFB1CDD8F8938F4EAB1210E16CAE8927"/>
+	</table>
+	<table name="BSPK_WEB_LIST_ITEM" uuid="C4846FCD9FA58147BD6D588E013DFDBA" id="25">
+		<field name="webDomainLangUuid" uuid="912C5E4E59FED14C811B78DD4B191679" type="10" store_as_UUID="true" id="1"/>
+		<field name="values" uuid="B10D604417C3E4478F2C526956FFD5C5" type="21" blob_switch_size="2147483647" id="2"/>
+		<field name="designation" uuid="7485DE0C35FF32438FE2815F39B72CCB" type="10" limiting_length="30" id="3"/>
+		<field name="webListUuid" uuid="B5E108048C5EEC4F878F4BCB4F6A9A14" type="10" store_as_UUID="true" id="4"/>
+		<field name="modifiedBy" uuid="FD6C60073FAEC24988FD44129DCC6D26" type="10" limiting_length="30" id="5"/>
+		<field name="modifiedOn" uuid="15F51269209C55469F24A480DDD94EA0" type="10" limiting_length="24" id="6"/>
+		<field name="createdBy" uuid="7E5E80142C32244D83897A16CE120BC9" type="10" limiting_length="30" id="7"/>
+		<field name="createdOn" uuid="C6118CE173F1C44DB915AF4DC6DE7138" type="10" limiting_length="24" never_null="true" id="8"/>
+		<field name="uuidKey" uuid="3EF01B7DE829F74D8F3E7D44AA0B1F8D" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="9"/>
+		<primary_key field_name="uuidKey" field_uuid="3EF01B7DE829F74D8F3E7D44AA0B1F8D"/>
+	</table>
+	<table name="PRODUCT" uuid="2ADC7B23B85386458945022D685C47FA" id="26">
+		<field name="uuidKey" uuid="44B838AD95B5FC4EA411DBEFDA2AAC6D" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="name" uuid="6FA40D011AEE7D44BEBE045EF09EF88C" type="10" limiting_length="255" id="2"/>
+		<field name="description" uuid="8490E161E0EA964889C9E7BBDA1CA767" type="10" id="3"/>
+		<field name="price" uuid="233ADA27B3FD8747B5122E90E6CA5F11" type="6" id="4"/>
+		<field name="category" uuid="97532D903EFC5447A414D67B0A6709BE" type="10" limiting_length="255" id="5"/>
+		<field name="createdOn" uuid="34149C82E86AEE4B92D4F7972E0EF796" type="10" limiting_length="24" id="6"/>
+		<field name="image" uuid="FB7ADB11D085D14B986E6FA7B5B89D76" type="12" id="7"/>
+		<field name="stock" uuid="83D72DB3D6DB714D90C20533640B1BBE" type="4" id="8"/>
+		<primary_key field_name="uuidKey" field_uuid="44B838AD95B5FC4EA411DBEFDA2AAC6D"/>
+	</table>
+	<relation uuid="9FDE38BB0CD7A64D967978FF4E4629F2" name_Nto1="UserGroup" name_1toN="UsersMembership" state="1">
+		<related_field kind="source">
+			<field_ref uuid="9698EF8ACF38FC4A93C8E4D62F240488" name="groupUuid">
+				<table_ref uuid="43C7B2C91E26DF4EB0CB58A02F473512" name="BSPK_USER_MEMBERSHIP"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="22529171E1962043B19D6D98FD908B90" name="uuidKey">
+				<table_ref uuid="285381B82ADE7147821BF7C01017CBF8" name="BSPK_USER_GROUP"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="B1C8280411552246B7336C4F6F4CB045" name_Nto1="User" name_1toN="UsersMembership" state="1">
+		<related_field kind="source">
+			<field_ref uuid="2B51E5D0EF40E94986D5F14002640E09" name="userUuid">
+				<table_ref uuid="43C7B2C91E26DF4EB0CB58A02F473512" name="BSPK_USER_MEMBERSHIP"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="8306722F53C06E468D261A3242D817D8" name="uuidKey">
+				<table_ref uuid="780691696A28A244B5C7AAA53BE2064B" name="BSPK_USER"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="B2187D385DA52245B98D0A68ECFC9BFB" name_Nto1="UserGroup" name_1toN="UserRightRules" state="1">
+		<related_field kind="source">
+			<field_ref uuid="7AD4D378AFD4DB4A87A52A511A588D62" name="userGroupUuid">
+				<table_ref uuid="EE48D1B672AB324382C7FD954AE4E987" name="BSPK_USER_RIGHT_RULE"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="22529171E1962043B19D6D98FD908B90" name="uuidKey">
+				<table_ref uuid="285381B82ADE7147821BF7C01017CBF8" name="BSPK_USER_GROUP"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="0AAA062EA9CA5343AD62BFDFA617F903" name_Nto1="UserRight" name_1toN="UserRightRules" state="1">
+		<related_field kind="source">
+			<field_ref uuid="A635D5B0F959134B9C135DF59D10D159" name="userRightUuid">
+				<table_ref uuid="EE48D1B672AB324382C7FD954AE4E987" name="BSPK_USER_RIGHT_RULE"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="9D9BD5914BF7BE4BA285339B10B703A7" name="uuidKey">
+				<table_ref uuid="8B2FC73B8D79E748A5115747C80B917C" name="BSPK_USER_RIGHT"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="944C9A5B3DAF7D46B1CFD9F6D8771BA7" name_Nto1="WebDomain" name_1toN="WebDomainLang" state="1">
+		<related_field kind="source">
+			<field_ref uuid="11D5799B0F7D434F8D99095CA4585B52" name="webDomainUuid">
+				<table_ref uuid="DA5412040C6EB54EA83EB1D0EE83D201" name="BSPK_WEB_DOMAIN_LANG"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="B8616D9CEDF02A48BBE4216F16A582C1" name="uuidKey">
+				<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="3834E44901E07F409485BBAF4B8B73F0" name_Nto1="ListParent" name_1toN="ListChildren" state="1">
+		<related_field kind="source">
+			<field_ref uuid="F67A534024FFF94A9E707FB36F1B5F17" name="masterListUuid">
+				<table_ref uuid="FA30AE13D6F3474AB0DFC48FF211EF25" name="BSPK_LIST"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="6BF12D42D845434A92AFEC5A933AA9C2" name="uuidKey">
+				<table_ref uuid="FA30AE13D6F3474AB0DFC48FF211EF25" name="BSPK_LIST"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="6923D0F2430D4E48BA6E4F214A96046D" name_Nto1="WebDomain" name_1toN="WebDomainMenuShared" state="1">
+		<related_field kind="source">
+			<field_ref uuid="040C67CA1170AC488F323BD83A8A2D7F" name="webDomainUuid">
+				<table_ref uuid="1D5E09AB284F7547914EDEA9C3F0D1DE" name="BSPK_WEB_DOMAIN_MENU_SHARED"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="B8616D9CEDF02A48BBE4216F16A582C1" name="uuidKey">
+				<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="6934DCFABD14C54D9889AF23494E4294" name_Nto1="WebDomainMenu" name_1toN="WebDomainMenuShared" state="1">
+		<related_field kind="source">
+			<field_ref uuid="33DE7F9CEB0F4D4FA28430B7943ABF30" name="webDomainMenuUuid">
+				<table_ref uuid="1D5E09AB284F7547914EDEA9C3F0D1DE" name="BSPK_WEB_DOMAIN_MENU_SHARED"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="01F1C6DC4DD864498B207FBEDE761070" name="uuidKey">
+				<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="A07056A4A8ACA543B0080EA380817730" name_Nto1="WebDomain" name_1toN="WebDomainMenus" state="1">
+		<related_field kind="source">
+			<field_ref uuid="9BEBBFF5FAF176468138C1DACA38485D" name="webDomainUuid">
+				<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="B8616D9CEDF02A48BBE4216F16A582C1" name="uuidKey">
+				<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="4AF885440D16594FA7B1B8584F4CD27A" name_Nto1="UserRight" name_1toN="WebDomainMenus" state="1">
+		<related_field kind="source">
+			<field_ref uuid="F6003294BF819743816721BE287227B9" name="userRightUuid">
+				<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="9D9BD5914BF7BE4BA285339B10B703A7" name="uuidKey">
+				<table_ref uuid="8B2FC73B8D79E748A5115747C80B917C" name="BSPK_USER_RIGHT"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="077E5807D215C34DA1D7D338D95E5D89" name_Nto1="UserRight" name_1toN="WebDomains" state="1">
+		<related_field kind="source">
+			<field_ref uuid="5BD1949C0B942541B9FE144819627876" name="userRightUuid">
+				<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="9D9BD5914BF7BE4BA285339B10B703A7" name="uuidKey">
+				<table_ref uuid="8B2FC73B8D79E748A5115747C80B917C" name="BSPK_USER_RIGHT"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="1F57096096993644B7520AB878CB0FAD" name_Nto1="Parent" name_1toN="Children" state="1">
+		<related_field kind="source">
+			<field_ref uuid="A72919176885A745946E2C6E573C495F" name="parentUuid">
+				<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="01F1C6DC4DD864498B207FBEDE761070" name="uuidKey">
+				<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="D9169C3B9421DD4A8575D5F80DC85ADE" name_Nto1="WebDomain" name_1toN="WebRedirects" state="1">
+		<related_field kind="source">
+			<field_ref uuid="234CA034CB60584C80A4A56A7B0D1175" name="webDomainUuid">
+				<table_ref uuid="751F7B9157EF474A9A5DCB6CD9A9EFB9" name="BSPK_WEB_REDIRECT"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="B8616D9CEDF02A48BBE4216F16A582C1" name="uuidKey">
+				<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="DD54C027C9233B47A24D47D4DA58ECA8" name_Nto1="WebDomainMenu" name_1toN="WebDomainMenuParameters" state="1">
+		<related_field kind="source">
+			<field_ref uuid="454CC1FE95F9A04EB969371E2A1EEF16" name="webDomainMenuUuid">
+				<table_ref uuid="B4E04C2AE07A364DA0AAFD34EFFCED4A" name="BSPK_WEB_DOMAIN_MENU_PARAMETER"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="01F1C6DC4DD864498B207FBEDE761070" name="uuidKey">
+				<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="37BFDD69D7C6B34CBF0324EF598999F3" name_Nto1="WebList" name_1toN="WebListItems" state="1">
+		<related_field kind="source">
+			<field_ref uuid="B5E108048C5EEC4F878F4BCB4F6A9A14" name="webListUuid">
+				<table_ref uuid="C4846FCD9FA58147BD6D588E013DFDBA" name="BSPK_WEB_LIST_ITEM"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="B4BBBCE295DE3C4085A5ED8F426ACB58" name="uuidKey">
+				<table_ref uuid="928FA9C6C389834A8BCE3B0136B81B51" name="BSPK_WEB_LIST"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="6738407CF85B6E44BA14BF1CE3772A3B" name_Nto1="WebDomain" name_1toN="WebLists" state="1">
+		<related_field kind="source">
+			<field_ref uuid="FA8A7B773CCD1E4EBE1A62C186999370" name="webDomainUuid">
+				<table_ref uuid="928FA9C6C389834A8BCE3B0136B81B51" name="BSPK_WEB_LIST"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="B8616D9CEDF02A48BBE4216F16A582C1" name="uuidKey">
+				<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="ADED030DE278944EA0D64DFB2964C367" name_Nto1="WebDomainLang" name_1toN="WebListItems" state="1">
+		<related_field kind="source">
+			<field_ref uuid="912C5E4E59FED14C811B78DD4B191679" name="webDomainLangUuid">
+				<table_ref uuid="C4846FCD9FA58147BD6D588E013DFDBA" name="BSPK_WEB_LIST_ITEM"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="46F8800A4B788748A9C4CFC4171BF474" name="uuidKey">
+				<table_ref uuid="DA5412040C6EB54EA83EB1D0EE83D201" name="BSPK_WEB_DOMAIN_LANG"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="82A61286DC3CD342AC32870895B78126" name_Nto1="WebContentParent" name_1toN="WebContentChildren" state="1">
+		<related_field kind="source">
+			<field_ref uuid="9001CA24FF0BBF45B25DC758AEF0BE41" name="parentUuid">
+				<table_ref uuid="A650681E049DDA4DBE484AF6FF5E12DB" name="BSPK_WEB_CONTENT"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="BFB1CDD8F8938F4EAB1210E16CAE8927" name="uuidKey">
+				<table_ref uuid="A650681E049DDA4DBE484AF6FF5E12DB" name="BSPK_WEB_CONTENT"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="A10CE3478F98CB41937E25C019FDD636" name_Nto1="WebDomainMenu" name_1toN="WebContents" state="1">
+		<related_field kind="source">
+			<field_ref uuid="BB06B4BDAEE13B4B940D453F5B6516B8" name="webDomainMenuUuid">
+				<table_ref uuid="A650681E049DDA4DBE484AF6FF5E12DB" name="BSPK_WEB_CONTENT"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="01F1C6DC4DD864498B207FBEDE761070" name="uuidKey">
+				<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="1036E206275894448B6717211B395CAE" name_Nto1="WebDomainMenu" name_1toN="WebDomains" state="1">
+		<related_field kind="source">
+			<field_ref uuid="AB05BED3910BDC47BB94E62CE21F8879" name="loginPageUuid">
+				<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="01F1C6DC4DD864498B207FBEDE761070" name="uuidKey">
+				<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<index kind="regular" uuid="00E7EED50FDE644FB82B789D20F34DF9" type="7">
+		<field_ref uuid="86544900A83D95428D93BCEC8FBBD762" name="modifiedOn">
+			<table_ref uuid="DD6527BFBE57F347AFF503F161A26087" name="BSPK_PARAM_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="020FBDE66570524783A63FE562295F21" type="7">
+		<field_ref uuid="6CADB1C1AA10AA45ACC4F218E70ED170" name="createdBy">
+			<table_ref uuid="AF2636A7A8A6A5479911F4B8299B0A20" name="BSPK_HISTORY"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="023C480B0B44E749A1BF058B3B02A58E" type="7">
+		<field_ref uuid="BF960EC7C69933438480FA10713EF301" name="createdBy">
+			<table_ref uuid="780691696A28A244B5C7AAA53BE2064B" name="BSPK_USER"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="0345E216AC09BF4CAE703BAC92C3092B" type="1">
+		<field_ref uuid="B8616D9CEDF02A48BBE4216F16A582C1" name="uuidKey">
+			<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="05DAA3B77EC92F42B4DCAC474E885970" type="1">
+		<field_ref uuid="34D2ACD5969BFA47B5DD1FD36DACEC77" name="uuidKey">
+			<table_ref uuid="24EDA3C04E10E24C940762B8C4CE04E3" name="BSPK_ERROR"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="091AB223E2D3F64BA3AC1F169DB446ED" type="1">
+		<field_ref uuid="48159F17FC0E9641993034A74AFA6A88" name="uuidKey">
+			<table_ref uuid="8D4B487514F3494BA0FF36AFCFE8F452" name="BSPK_TASK_MANAGER"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="0BB1BD23D291FF448241FF58ACE3F933" type="7">
+		<field_ref uuid="070FD46A20DEB3408F61440493161B93" name="category">
+			<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="0CC5427AE7E2494686AA6601123E1B34" type="1">
+		<field_ref uuid="7D5F76D78AD6064F8A993174D61C6FD1" name="uuidKey">
+			<table_ref uuid="43C7B2C91E26DF4EB0CB58A02F473512" name="BSPK_USER_MEMBERSHIP"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="0D6F945FE784FB4E8FD63CA3CF155F13" type="1">
+		<field_ref uuid="44B838AD95B5FC4EA411DBEFDA2AAC6D" name="uuidKey">
+			<table_ref uuid="2ADC7B23B85386458945022D685C47FA" name="PRODUCT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="178F6CE19539EB41A90382710ADFF870" type="1">
+		<field_ref uuid="17D6EC662C79CC449591F5DD977FBE43" name="ref">
+			<table_ref uuid="8B2FC73B8D79E748A5115747C80B917C" name="BSPK_USER_RIGHT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="1900A421C8A37E4EAC6826A2089B428B" type="7">
+		<field_ref uuid="B4453C3811CB7C4C9C9AE6927DEC0EBB" name="createdBy">
+			<table_ref uuid="928FA9C6C389834A8BCE3B0136B81B51" name="BSPK_WEB_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="195766122615C445BF6C977BFF3C9756" type="7">
+		<field_ref uuid="7E5E80142C32244D83897A16CE120BC9" name="createdBy">
+			<table_ref uuid="C4846FCD9FA58147BD6D588E013DFDBA" name="BSPK_WEB_LIST_ITEM"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="19E0A000CA5A0644B1265D3C436BB86B" type="1">
+		<field_ref uuid="52271B052201DB40BDAEF454BE1B1E31" name="uuidKey">
+			<table_ref uuid="B4E04C2AE07A364DA0AAFD34EFFCED4A" name="BSPK_WEB_DOMAIN_MENU_PARAMETER"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="1FB66185F807CC47967ED3A97D9619FF" type="3">
+		<field_ref uuid="07AF8E7E4A5C4349A3B4737FAE9390A1" name="languageOptions">
+			<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="21EBBAB220324D4DA2B0C4326965D3E3" type="7">
+		<field_ref uuid="15F51269209C55469F24A480DDD94EA0" name="modifiedOn">
+			<table_ref uuid="C4846FCD9FA58147BD6D588E013DFDBA" name="BSPK_WEB_LIST_ITEM"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="228BA1B150D0A5458BCA0F05506FD0AD" type="1">
+		<field_ref uuid="8306722F53C06E468D261A3242D817D8" name="uuidKey">
+			<table_ref uuid="780691696A28A244B5C7AAA53BE2064B" name="BSPK_USER"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="22DD173E1D80FD4592072D2A8593ACD7" type="7">
+		<field_ref uuid="F3FA9BFFD648D0449D454B29757BC315" name="createdBy">
+			<table_ref uuid="FA30AE13D6F3474AB0DFC48FF211EF25" name="BSPK_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="27740F08DBD4914891B5E6A5ADC89D1A" type="7">
+		<field_ref uuid="48E6C7BE2B9FCA42BBBBBE2D3074895B" name="createdOn">
+			<table_ref uuid="780691696A28A244B5C7AAA53BE2064B" name="BSPK_USER"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="311DCA3F2511AC48B140014BF8CE4ABB" type="7">
+		<field_ref uuid="FD6C60073FAEC24988FD44129DCC6D26" name="modifiedBy">
+			<table_ref uuid="C4846FCD9FA58147BD6D588E013DFDBA" name="BSPK_WEB_LIST_ITEM"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="3253923A9375AB46937903C86A94AE06" type="7">
+		<field_ref uuid="6FC09B79BAF3824881A9806B3396E57A" name="modifiedBy">
+			<table_ref uuid="F62FD78E6FE5D242A0581974276A4917" name="BSPK_TABLE_TEMPLATE"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="32F86A737A99554EA025B5831F4A742C" type="1">
+		<field_ref uuid="B4BBBCE295DE3C4085A5ED8F426ACB58" name="uuidKey">
+			<table_ref uuid="928FA9C6C389834A8BCE3B0136B81B51" name="BSPK_WEB_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="3472B92CF706D844817C2DF7D6B61EFF" type="7">
+		<field_ref uuid="75EF34FA4B12664B90DE8DA2FDDA138C" name="modifiedBy">
+			<table_ref uuid="B799018BB215DA4D95294CDDD56599B0" name="BSPK_IPN"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="3E75BB40E6BABC4C84755C6A0526753B" type="7">
+		<field_ref uuid="452C6A73A55CD94CB417C255A288B00A" name="createdBy">
+			<table_ref uuid="70F149DCBDA0BA429080797CA59DE69D" name="BSPK_FILE"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="40915E786590BC4CA9A2DAB227BBAAFA" type="7">
+		<field_ref uuid="0F53A563A03A3E48B8E7EBBC76DAB178" name="modifiedOn">
+			<table_ref uuid="A650681E049DDA4DBE484AF6FF5E12DB" name="BSPK_WEB_CONTENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="418251844FEC87499E4DA4F29549D142" type="7">
+		<field_ref uuid="AB05BED3910BDC47BB94E62CE21F8879" name="loginPageUuid">
+			<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="4640C12B31494341B759591BDF759305" type="7">
+		<field_ref uuid="DB430D7B6C709949ADDF99C3F72C094D" name="createdBy">
+			<table_ref uuid="B799018BB215DA4D95294CDDD56599B0" name="BSPK_IPN"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="4BBE9AF31129034793601FDBA1C739CE" type="1">
+		<field_ref uuid="0681B13E5E3E434183F850D09F2F3F6B" name="uuidKey">
+			<table_ref uuid="AF2636A7A8A6A5479911F4B8299B0A20" name="BSPK_HISTORY"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="4D898CB39307244482533B0F0D3D07FC" type="7">
+		<field_ref uuid="257F710675A46A43812999D48894639A" name="reference">
+			<table_ref uuid="FA30AE13D6F3474AB0DFC48FF211EF25" name="BSPK_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="4F0791C00D564C4E8A9D6F92EDA0E79C" type="7">
+		<field_ref uuid="9BA9EBEAFF6B4543822573E1441E7398" name="modifiedBy">
+			<table_ref uuid="DD6527BFBE57F347AFF503F161A26087" name="BSPK_PARAM_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="599C1916ED8BC04C9302D63EF776C21D" type="7">
+		<field_ref uuid="4BC115B05305054DA779675993D45EEF" name="type">
+			<table_ref uuid="A650681E049DDA4DBE484AF6FF5E12DB" name="BSPK_WEB_CONTENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="5A348055BF7AC342910E4EB9FD203E36" type="7">
+		<field_ref uuid="CA57477F08FD2D45BF5D051A89D9DECC" name="createdBy">
+			<table_ref uuid="A650681E049DDA4DBE484AF6FF5E12DB" name="BSPK_WEB_CONTENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="5A498A870ADE8547BAFB97AA283A2FB0" type="7">
+		<field_ref uuid="178BAB826CED024688656C4C62A6F793" name="modifiedBy">
+			<table_ref uuid="780691696A28A244B5C7AAA53BE2064B" name="BSPK_USER"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="5F0937D44AFC28489230A07E48DB4A45" type="1">
+		<field_ref uuid="6BF12D42D845434A92AFEC5A933AA9C2" name="uuidKey">
+			<table_ref uuid="FA30AE13D6F3474AB0DFC48FF211EF25" name="BSPK_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="6578BF59C07C394480A88E07537312FC" type="7">
+		<field_ref uuid="2B4B68A73CA0044BA514E9D5B41E3FCE" name="createdOn">
+			<table_ref uuid="B799018BB215DA4D95294CDDD56599B0" name="BSPK_IPN"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="6813D6D98FC0D64C9F3F94015AB5176C" type="7">
+		<field_ref uuid="1F46D5410B078442834675BAF5DEDF60" name="createdOn">
+			<table_ref uuid="24EDA3C04E10E24C940762B8C4CE04E3" name="BSPK_ERROR"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="70ADAC5FA5233049BF2110055B391FEE" type="1">
+		<field_ref uuid="594BFE6C9DEB724A925D0F04CAA684ED" name="uuidKey">
+			<table_ref uuid="8622228E430F324987602499041FF9D6" name="BSPK_USER_PROCESS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="73B9400C9E228D488D822B9A55EEBBEE" type="7">
+		<field_ref uuid="03095A1B47F81A49981DEC841CB8257F" name="publish">
+			<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="784295E4FEC2054781EB63827EF62E2D" type="1">
+		<field_ref uuid="9D9BD5914BF7BE4BA285339B10B703A7" name="uuidKey">
+			<table_ref uuid="8B2FC73B8D79E748A5115747C80B917C" name="BSPK_USER_RIGHT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="7C3252A6FD254D4A9A163F7080B8D23D" type="7">
+		<field_ref uuid="7485DE0C35FF32438FE2815F39B72CCB" name="designation">
+			<table_ref uuid="C4846FCD9FA58147BD6D588E013DFDBA" name="BSPK_WEB_LIST_ITEM"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="7CE471ED1773ED4D99623BEED5F88206" type="7">
+		<field_ref uuid="262127E1F9C81E419709E6C559ED8A68" name="name">
+			<table_ref uuid="928FA9C6C389834A8BCE3B0136B81B51" name="BSPK_WEB_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="86C1DB2DEF87F64D835A8E0FD92196D1" type="7">
+		<field_ref uuid="020E99E7530D6441926430624E92521C" name="createdOn">
+			<table_ref uuid="FA30AE13D6F3474AB0DFC48FF211EF25" name="BSPK_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="8A66A8EB31380A4087389F1A0E4D7EFA" type="7">
+		<field_ref uuid="E1135D5E5446C84FBC88E7D809F24B13" name="createdOn">
+			<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="8F2D3C030D90DE44873DE6F1460A78B4" type="7">
+		<field_ref uuid="DBA72A5B6F7C9042A383B61ED6D2BB93" name="modifiedBy">
+			<table_ref uuid="A650681E049DDA4DBE484AF6FF5E12DB" name="BSPK_WEB_CONTENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="8FCF83FF9BBEFC4FB878CC47710986B9" type="1">
+		<field_ref uuid="BFB1CDD8F8938F4EAB1210E16CAE8927" name="uuidKey">
+			<table_ref uuid="A650681E049DDA4DBE484AF6FF5E12DB" name="BSPK_WEB_CONTENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="8FFAAA8150552D419F2921616ACA8AD8" type="7">
+		<field_ref uuid="EB09A9280515DD4199857EF03F2A09FA" name="createdOn">
+			<table_ref uuid="A650681E049DDA4DBE484AF6FF5E12DB" name="BSPK_WEB_CONTENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="918389CDC6E70E4F9FD8A1385C170528" type="7">
+		<field_ref uuid="233ADA27B3FD8747B5122E90E6CA5F11" name="price">
+			<table_ref uuid="2ADC7B23B85386458945022D685C47FA" name="PRODUCT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="97F1826DD31994418CB9D2BAC9504A45" type="1">
+		<field_ref uuid="22529171E1962043B19D6D98FD908B90" name="uuidKey">
+			<table_ref uuid="285381B82ADE7147821BF7C01017CBF8" name="BSPK_USER_GROUP"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="97F3479A62D0EE4282716C05EAC58AA2" type="7">
+		<field_ref uuid="60BA4E2ADA5EB441B2C1D54D6094465B" name="modifiedOn">
+			<table_ref uuid="780691696A28A244B5C7AAA53BE2064B" name="BSPK_USER"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="98C759FDD2A6304081F8118BF7A59072" type="7">
+		<field_ref uuid="38F3710EF905F34F8E27F5D4AB6483AE" name="modifiedOn">
+			<table_ref uuid="FA30AE13D6F3474AB0DFC48FF211EF25" name="BSPK_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="9B18316E260C4C41A0FF73C4523C1E87" type="7">
+		<field_ref uuid="F01CF9190986CC4CAC96D24D812A306D" name="createdBy">
+			<table_ref uuid="4AB2296E63D2C64E94AFECF9E5A6BE55" name="BSPK_WEB_COOKIE_CONSENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="9D436D92001F444AB674BED480B0331A" type="7">
+		<field_ref uuid="4C2153ECC20E0E479234C1C3D833083C" name="modifiedOn">
+			<table_ref uuid="928FA9C6C389834A8BCE3B0136B81B51" name="BSPK_WEB_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A14F7C2346C04345811964364B755479" type="7">
+		<field_ref uuid="4248835FB916454F8BFF718FCA6B03DD" name="createdOn">
+			<table_ref uuid="70F149DCBDA0BA429080797CA59DE69D" name="BSPK_FILE"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A16520ABD2F7C14799681729372C4446" type="7">
+		<field_ref uuid="527E3C038DDFBE42BD0578AF0DB7A999" name="createdOn">
+			<table_ref uuid="928FA9C6C389834A8BCE3B0136B81B51" name="BSPK_WEB_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="keywords" uuid="AA6616CDEAB53547A37D700C2BBD2103" type="3">
+		<field_ref uuid="9E7F81C384DC4B4F8E9A55252A0402E0" name="parentCollection">
+			<table_ref uuid="A650681E049DDA4DBE484AF6FF5E12DB" name="BSPK_WEB_CONTENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="AC100A9DFC64A64B8D7104E7C7BBC1C2" type="1">
+		<field_ref uuid="01F1C6DC4DD864498B207FBEDE761070" name="uuidKey">
+			<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="AD27ED1CE1642440A22AFE70BD6B934F" type="7">
+		<field_ref uuid="6BE8FABAD4DA584FAFDBE5F30DF8E303" name="modifiedOn">
+			<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="AD3CB4492A36AE40AD6885E065194BA2" type="1">
+		<field_ref uuid="4399FC05BA843940B9AA42BB380F2145" name="uuidKey">
+			<table_ref uuid="B799018BB215DA4D95294CDDD56599B0" name="BSPK_IPN"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="AE33829D6D64A24FB6466C8E008C29DA" type="3">
+		<field_ref uuid="020F3C5CDBD9B14F8618A18C0B59EEB1" name="publishEnd">
+			<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="B2E45C6349BCF448A6E45968071AE3AE" type="7">
+		<field_ref uuid="610D429CBCC90448A81630352936FBC3" name="modifiedBy">
+			<table_ref uuid="70F149DCBDA0BA429080797CA59DE69D" name="BSPK_FILE"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="B4D1D109F8AAAE489BB3FBFFEE18C388" type="1">
+		<field_ref uuid="3EF01B7DE829F74D8F3E7D44AA0B1F8D" name="uuidKey">
+			<table_ref uuid="C4846FCD9FA58147BD6D588E013DFDBA" name="BSPK_WEB_LIST_ITEM"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="B5152DEC5F72A34E9A763B072EBA4619" type="7">
+		<field_ref uuid="9001CA24FF0BBF45B25DC758AEF0BE41" name="parentUuid">
+			<table_ref uuid="A650681E049DDA4DBE484AF6FF5E12DB" name="BSPK_WEB_CONTENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="B85CE2B0B8A5C346AA827EB81575E552" type="7">
+		<field_ref uuid="454CC1FE95F9A04EB969371E2A1EEF16" name="webDomainMenuUuid">
+			<table_ref uuid="B4E04C2AE07A364DA0AAFD34EFFCED4A" name="BSPK_WEB_DOMAIN_MENU_PARAMETER"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="B89910281FF0674E87CEDC6AE0191029" type="7">
+		<field_ref uuid="A471B2BC27E6F14AB61CB48EF0EB2FED" name="createdOn">
+			<table_ref uuid="DD6527BFBE57F347AFF503F161A26087" name="BSPK_PARAM_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="B90E0C3E2B2A1343BDAA574EAA2D172A" type="1">
+		<field_ref uuid="46F8800A4B788748A9C4CFC4171BF474" name="uuidKey">
+			<table_ref uuid="DA5412040C6EB54EA83EB1D0EE83D201" name="BSPK_WEB_DOMAIN_LANG"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="BD64053E92A32B469158DCA34322660B" type="7">
+		<field_ref uuid="BB06B4BDAEE13B4B940D453F5B6516B8" name="webDomainMenuUuid">
+			<table_ref uuid="A650681E049DDA4DBE484AF6FF5E12DB" name="BSPK_WEB_CONTENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="C0A836BBD12B754BBE0C31178276F082" type="1">
+		<field_ref uuid="7565EC3EECAD0D47AEBE359BA9A92A73" name="uuidKey">
+			<table_ref uuid="4AB2296E63D2C64E94AFECF9E5A6BE55" name="BSPK_WEB_COOKIE_CONSENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="C0FC02E0894C87439675565D6C62739F" type="3">
+		<field_ref uuid="4B3D68C474032C41A0710239F753FAEB" name="publishStart">
+			<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="C15DD1F13A21C3428D1FC418C687947B" type="7">
+		<field_ref uuid="F0BF923E46B442439537C70A91C58F27" name="createdBy">
+			<table_ref uuid="DD6527BFBE57F347AFF503F161A26087" name="BSPK_PARAM_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="C4608B5597BFCD42A7C3EEB1472AEA03" type="7">
+		<field_ref uuid="C6118CE173F1C44DB915AF4DC6DE7138" name="createdOn">
+			<table_ref uuid="C4846FCD9FA58147BD6D588E013DFDBA" name="BSPK_WEB_LIST_ITEM"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="CB8BB481244EF5439382550B02EBAC1B" type="7">
+		<field_ref uuid="EEFF4B99C1DD2D43B4DDECFA3841DC66" name="modifiedOn">
+			<table_ref uuid="B799018BB215DA4D95294CDDD56599B0" name="BSPK_IPN"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="CCB1ACE8C9B55741A7DD14D6C6DC508C" type="7">
+		<field_ref uuid="B0326BD4BE39894D8282D0EE99455A7B" name="modifiedBy">
+			<table_ref uuid="928FA9C6C389834A8BCE3B0136B81B51" name="BSPK_WEB_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="CF36B75F0326E5438A82AB965A61A852" type="7">
+		<field_ref uuid="72AA3EEF3A69824282FFB9F4E7EE5209" name="createdOn">
+			<table_ref uuid="F62FD78E6FE5D242A0581974276A4917" name="BSPK_TABLE_TEMPLATE"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D1255CF6F9CF324FBB5C36398EB75511" type="7">
+		<field_ref uuid="3D4952DE5769BD448D442E6E2C5D6EFD" name="modifiedBy">
+			<table_ref uuid="FA30AE13D6F3474AB0DFC48FF211EF25" name="BSPK_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D155871DF9B1784A9B9AE030B6C33884" type="7">
+		<field_ref uuid="912C5E4E59FED14C811B78DD4B191679" name="webDomainLangUuid">
+			<table_ref uuid="C4846FCD9FA58147BD6D588E013DFDBA" name="BSPK_WEB_LIST_ITEM"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D48E64E1D963D14EA4FC5D899BF7873D" type="7">
+		<field_ref uuid="7CFFC5FC3508DD43A6BF6CDF7A0D756D" name="modifiedOn">
+			<table_ref uuid="4AB2296E63D2C64E94AFECF9E5A6BE55" name="BSPK_WEB_COOKIE_CONSENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D4E82796335E384E9B6946E8850409B6" type="1">
+		<field_ref uuid="307651C59F79414EB9B126412259A784" name="name">
+			<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D566C444BABB1148BD6223880189528A" type="7">
+		<field_ref uuid="EA3421DE77A2F54F8E724B12A929D831" name="modifiedOn">
+			<table_ref uuid="70F149DCBDA0BA429080797CA59DE69D" name="BSPK_FILE"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="D6DEFF4EDDDB3C459385A2B6A54BFCD4" type="1">
+		<field_ref uuid="F7E9A59535B27A469025359C63F7353F" name="uuidKey">
+			<table_ref uuid="751F7B9157EF474A9A5DCB6CD9A9EFB9" name="BSPK_WEB_REDIRECT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D8DB1F6B4B501F4981F2C0018AE502A8" type="1">
+		<field_ref uuid="46B05A366BF3C54B8CEBCE24B064C87B" name="code">
+			<table_ref uuid="780691696A28A244B5C7AAA53BE2064B" name="BSPK_USER"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="DAFB8A4B755BFE458A7F0FC1EEF876AD" type="1">
+		<field_ref uuid="F9A4FE2E6A756146A964D8BD1D71E7A8" name="uuidKey">
+			<table_ref uuid="70F149DCBDA0BA429080797CA59DE69D" name="BSPK_FILE"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="DBD3415EC5093E4A9654A983A88F2B2F" type="1">
+		<field_ref uuid="99EB4A68F7AF744EB71422D37599B0BD" name="name">
+			<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="DC7EAEAB90C3504C92FD006C67F1D895" type="7">
+		<field_ref uuid="94374CB9CC6301469A1B8B8AAC992997" name="createdBy">
+			<table_ref uuid="F62FD78E6FE5D242A0581974276A4917" name="BSPK_TABLE_TEMPLATE"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="DD46FE9998D96A4487FF637D77504246" type="1">
+		<field_ref uuid="631F00C7DE13044D97A94CDB8AE57327" name="uuidKey">
+			<table_ref uuid="1D5E09AB284F7547914EDEA9C3F0D1DE" name="BSPK_WEB_DOMAIN_MENU_SHARED"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="DD749D1DD499974EBA6F011B4F807390" type="7">
+		<field_ref uuid="2DAAE87F729E46469B91611BD9DC313F" name="createdOn">
+			<table_ref uuid="4AB2296E63D2C64E94AFECF9E5A6BE55" name="BSPK_WEB_COOKIE_CONSENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="DDBA0A5026B80849AFC3BB7C45399787" type="7">
+		<field_ref uuid="F8D006197C6973409655772BA776307D" name="active">
+			<table_ref uuid="780691696A28A244B5C7AAA53BE2064B" name="BSPK_USER"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="E08CB7D62F189D418AFCC4F4543A8058" type="7">
+		<field_ref uuid="9A3DF8CE44B0704881FA0E6D8F94FA3E" name="value">
+			<table_ref uuid="FA30AE13D6F3474AB0DFC48FF211EF25" name="BSPK_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="E7C6E66F5264074D892274C90C2D4B8A" type="7">
+		<field_ref uuid="73F2A15C90C1324BB66D12FDEC6CD8E8" name="blockName">
+			<table_ref uuid="A650681E049DDA4DBE484AF6FF5E12DB" name="BSPK_WEB_CONTENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="ED86DF3013384043A67CB71DB5703A14" type="7">
+		<field_ref uuid="678CD8E99706F04FA15B649747548BD6" name="createdOn">
+			<table_ref uuid="AF2636A7A8A6A5479911F4B8299B0A20" name="BSPK_HISTORY"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="EDC3FB928CD8DA44A42A37D079945F43" type="7">
+		<field_ref uuid="7D5F96DCD9CD324F93085E91C794410B" name="modifiedBy">
+			<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="EFFE26EB126415438EDA1CA36B10ACA2" type="7">
+		<field_ref uuid="7E85F7DA37051B4E88F9DD3743CD105B" name="urlParts">
+			<table_ref uuid="4521A9AD6A929043B66AFDA8B6B1612E" name="BSPK_WEB_DOMAIN_MENU"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="F1BA2452ACDB6A4998F5AD5B825D606F" type="1">
+		<field_ref uuid="A759C4A68B5EB748B21FEA66CBE43268" name="uuidKey">
+			<table_ref uuid="83F81B04A2960B4E8C605CB49F390E87" name="BSPK"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="F1DF720ABDBFD04CADFF0584FEB437FB" type="1">
+		<field_ref uuid="4C73186061B7AE419AF78E3A09DC779E" name="uuidKey">
+			<table_ref uuid="DD6527BFBE57F347AFF503F161A26087" name="BSPK_PARAM_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="F3209A68D9A8B14AA61EAEBD493268D2" type="1">
+		<field_ref uuid="8F1E2EA45E406345A5F56061AF6234B2" name="uuidKey">
+			<table_ref uuid="EE48D1B672AB324382C7FD954AE4E987" name="BSPK_USER_RIGHT_RULE"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="F3446466DC6C3B498362C2E94F831831" type="7">
+		<field_ref uuid="B5E108048C5EEC4F878F4BCB4F6A9A14" name="webListUuid">
+			<table_ref uuid="C4846FCD9FA58147BD6D588E013DFDBA" name="BSPK_WEB_LIST_ITEM"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="F3EE503E511C754FA753B6159CD21143" type="7">
+		<field_ref uuid="C59AD99F2DADFC4F8D40C5415A0A505F" name="modifiedOn">
+			<table_ref uuid="F62FD78E6FE5D242A0581974276A4917" name="BSPK_TABLE_TEMPLATE"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="F49093036DF2C0428A64B39D6F4DC76A" type="1">
+		<field_ref uuid="2A34572EC0F8B647AAA15E80E27079B2" name="uuidKey">
+			<table_ref uuid="F62FD78E6FE5D242A0581974276A4917" name="BSPK_TABLE_TEMPLATE"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="F59CDD69326EC94CB4658257743394C6" type="7">
+		<field_ref uuid="86A0247FBFE59B4F92A43F9453468B97" name="modifiedBy">
+			<table_ref uuid="4AB2296E63D2C64E94AFECF9E5A6BE55" name="BSPK_WEB_COOKIE_CONSENT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="FC138AC9F830244994F7DB9369209D24" type="7">
+		<field_ref uuid="FA8A7B773CCD1E4EBE1A62C186999370" name="webDomainUuid">
+			<table_ref uuid="928FA9C6C389834A8BCE3B0136B81B51" name="BSPK_WEB_LIST"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="FC4F1E713A229B4FBF5BC47A9A368157" type="7">
+		<field_ref uuid="6FA40D011AEE7D44BEBE045EF09EF88C" name="name">
+			<table_ref uuid="2ADC7B23B85386458945022D685C47FA" name="PRODUCT"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="FD5AAEEF4356A340BC078F9992217A5E" type="7">
+		<field_ref uuid="C6B36C0CCC8B9B4096EC3B159AA45F42" name="createdBy">
+			<table_ref uuid="C37A4087E87DBD40BD7258EC3CC76C27" name="BSPK_WEB_DOMAIN"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="FE295C094E046248842825EF7FAD0254" type="7">
+		<field_ref uuid="B470F437FE379B438736A48BB2EEB84D" name="createdBy">
+			<table_ref uuid="24EDA3C04E10E24C940762B8C4CE04E3" name="BSPK_ERROR"/>
+		</field_ref>
+	</index>
+	<base_extra>
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>
