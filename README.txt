@@ -8,6 +8,8 @@ En prévision de votre première visite, il faudra modifier votre fichier host p
 
 Une fois tout cela fait, lancer la base 4D démo et ouvrir sur votre navigateur sur l'un des domaines disponibles.
 
+Comment modifier son fichier host ? suivez le lien pour une explication complète
+https://www.hostinger.com/fr/tutoriels/modifier-fichier-hosts
 
 To try this demo, you need to replace the project’s empty BSPK.4DBase component with the latest version downloaded from our site : https://bspoke.fr/en/resources
 
@@ -18,3 +20,5 @@ In anticipation of your first visit, you will need to modify your host file to a
 127.0.0.1	myproducts.localhost
 
 Once all this is done, launch the 4D demo database and open on your browser on one of the available domains.
+How to modify your host file? follow the link for a full explanation
+https://www.hostinger.com/uk/tutorials/how-to-edit-hosts-file
